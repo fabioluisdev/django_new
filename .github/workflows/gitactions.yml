@@ -1,0 +1,43 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:14
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: postgres
+        ports: [ '5432:5432' ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
+          architecture: x64
+      - name: Instalar dependências
+        run: |
+          pip install pipenv
+          pipenv sync -d
+      - name: Rodar flake8
+        run: |
+          pipenv flake8 .
+          pipenv pytest --cov=pypro
+      - name: Codecov
+        env:
+          CODECOV_TOKEN: '41bc463b-1963-441c-aa75-8cc3bdf275ef'
+        run: |
+          pipenv codecov
+          echo Add other actions to build,
+          echo test, and deploy your project.
