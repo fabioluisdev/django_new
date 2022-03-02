@@ -36,7 +36,7 @@ on:
           pipenv pytest --cov=pypro
       - name: Codecov
         env:
-          CODECOV_TOKEN: '41bc463b-1963-441c-aa75-8cc3bdf275ef'
+          CODECOV_TOKEN: 'dd284f1f-ad45-4529-9d3f-d5ae323e6a1d'
         run: |
           pipenv codecov
           echo Add other actions to build,
