@@ -28,7 +28,7 @@ jobs:
           pipenv sync --dev
       - name: Lint with flake8
         run: |
-          pipenv flake8 .
+          pipenv run flake8 .
       - name: Test with pytest
         run: |
           pipenv run pytest --cov=pypro
