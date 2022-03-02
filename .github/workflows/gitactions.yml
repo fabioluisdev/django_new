@@ -1,12 +1,12 @@
-name: Test
+name: Django aplications
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+on: [pull_request]
+
+jobs:
+  build:
+    env:
+      PIPENV_NO_INHERIT: 1
+      PIPENV_IGNORE_VIRTUALENVS: 1
 
     runs-on: ubuntu-latest
 
@@ -29,15 +29,15 @@ on:
       - name: Instalar dependências
         run: |
           pip install pipenv
-          pipenv sync -d
-      - name: Rodar flake8
+          pipenv sync --dev
+      - name: Lint with flake8
         run: |
-          pipenv flake8 .
-          pipenv pytest --cov=pypro
-      - name: Codecov
+          pipenv run flake8 .
+      - name: Test with pytest
+        run: |
+          pipenv run pytest --cov=pypro
+      - name: Posting Coverage
         env:
           CODECOV_TOKEN: 'dd284f1f-ad45-4529-9d3f-d5ae323e6a1d'
         run: |
-          pipenv codecov
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          pipenv run codecov
