@@ -1,13 +1,10 @@
-name:
+name: Django aplications
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
 
+on: [pull_request]
+
+jobs:
+  build:
     runs-on: ubuntu-latest
 
     services:
@@ -29,14 +26,15 @@ on:
       - name: Instalar dependências
         run: |
           pip install pipenv
-          pipenv sync -d
-      - name: Rodar flake8
+          pipenv sync --dev
+      - name: Lint with flake8
         run: |
-          pipenv flake8 .
-          pipenv pytest --cov=pypro
-      - name: Codecov
+          pipenv run flake8 .
+      - name: Test with pytest
+        run: |
+          pipenv run pytest --cov=pypro
+      - name: Posting Coverage
         env:
-          CODECOV_TOKEN: '41bc463b-1963-441c-aa75-8cc3bdf275ef'
-        run: |
-          pipenv codecov
-          
+          CODECOV_TOKEN: 'dd284f1f-ad45-4529-9d3f-d5ae323e6a1d'
+          pipenv run codecov
+
