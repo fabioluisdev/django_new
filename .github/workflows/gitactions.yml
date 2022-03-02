@@ -1,4 +1,4 @@
-name: Test
+name:
 
 on:
   push:
@@ -33,7 +33,7 @@ on:
       - name: Rodar flake8
         run: |
           pipenv flake8 .
-          pipenv pytest --cov=pypro
+          pipenv pytest
       - name: Codecov
         env:
           CODECOV_TOKEN: '41bc463b-1963-441c-aa75-8cc3bdf275ef'
