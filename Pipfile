@@ -4,15 +4,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "*"
+Django = "==3.2.11"
 gunicorn = "*"
 pytest-django = "*"
 python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
 Collectfast = "*"
-django = "==3.2"
-collectfast = "*"
+pytest = "*"
+codecov = "*"
+django = "*"
 
 [dev-packages]
 flake8 = "*"
