@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-Django = "==3.2.11"
 gunicorn = "*"
 pytest-django = "*"
 python-decouple = "*"
