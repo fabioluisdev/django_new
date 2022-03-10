@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
-    's3_folder_storage',
     'pypro.base',
 ]
 
