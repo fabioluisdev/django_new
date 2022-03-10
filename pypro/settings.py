@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'collectfast',
     'django.contrib.staticfiles',
+    's3_folder_storage',
     'pypro.base',
 ]
 
@@ -133,7 +134,7 @@ COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
-# STORAGE CONFIURATION IN S3 AWS
+# STORAGE CONFIGURATION IN S3 AWS
 # ---------------------------------------------------
 
 if AWS_ACCESS_KEY_ID:

@@ -8,10 +8,11 @@ gunicorn = "*"
 pytest-django = "*"
 python-decouple = "*"
 dj-database-url = "*"
-psycopg2-binary = "*"
 Collectfast = "*"
 pytest = "*"
 codecov = "*"
+django-s3-folder-storage = "*"
+psycopg2-binary = "*"
 django = "*"
 
 [dev-packages]
