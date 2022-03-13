@@ -14,6 +14,7 @@ codecov = "*"
 django-s3-folder-storage = "*"
 psycopg2-binary = "*"
 django = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 flake8 = "*"
