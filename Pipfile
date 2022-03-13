@@ -4,6 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+django = "*"
 gunicorn = "*"
 pytest-django = "*"
 python-decouple = "*"
@@ -13,7 +14,6 @@ pytest = "*"
 codecov = "*"
 django-s3-folder-storage = "*"
 psycopg2-binary = "*"
-django = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
 
