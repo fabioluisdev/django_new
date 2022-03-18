@@ -20,8 +20,6 @@ def test_status_code(resp):
         'Instalacao Windows'
     ]
 )
-
-
 def test_titulo_video(resp, titulo):
     assert_contains(resp, titulo)
 
@@ -33,8 +31,6 @@ def test_titulo_video(resp, titulo):
         'instalacao-windows'
     ]
 )
-
-
 def test_link_video(resp, slug):
     video_link = reverse('aperitivos:video', args=(slug,))
     assert_contains(resp, f'href="{video_link}"')
