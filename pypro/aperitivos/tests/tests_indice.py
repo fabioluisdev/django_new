@@ -14,14 +14,14 @@ def test_status_code(resp):
 
 
 @pytest.mark.parametrize(
-    'titulo',
+    'slug',
     [
         'Video Aperitivo: Motivacao',
         'Instalacao Windows'
     ]
 )
-def test_titulo_video(resp, titulo):
-    assert_contains(resp, titulo)
+def test_titulo_video(resp, slug):
+    assert_contains(resp, slug)
 
 
 @pytest.mark.parametrize(
