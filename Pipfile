@@ -22,6 +22,7 @@ flake8 = "*"
 pytest-cov = "*"
 codecov = "*"
 sync = "*"
+model-mommy = "*"
 
 [requires]
 python_version = "3.9"
