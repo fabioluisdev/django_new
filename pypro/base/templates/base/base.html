@@ -30,6 +30,18 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                   aria-expanded="false">
+                    Modulos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for modulo in MODULOS %}
+                    <a class="dropdown-item" href="#">{{modulo.titulo}}</a>
+                    <div class="dropdown-divider"></div>
+                    {% endfor %}
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
