@@ -1,5 +1,6 @@
 # django_new
 Curso-Django Fabio para aprender usar o Framework! 
+Programando com Libs e praticando os testes.
 
 Aplicacao disponivel em https://pythondjangofls.herokuapp.com/
 
