@@ -16,6 +16,7 @@ django-s3-folder-storage = "*"
 psycopg2-binary = "*"
 django-debug-toolbar = "*"
 sentry-sdk = "*"
+django-ordered-model = "*"
 
 [dev-packages]
 flake8 = "*"
