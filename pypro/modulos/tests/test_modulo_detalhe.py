@@ -10,6 +10,7 @@ from pypro.modulos.models import Modulo, Aula
 def modulo(db):
     return mommy.make(Modulo)
 
+
 @pytest.fixture
 def aulas(modulo):
     return mommy.make(Aula, 3, modulo=modulo)
