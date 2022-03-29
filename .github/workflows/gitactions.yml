@@ -37,7 +37,7 @@ jobs:
           pipenv run pytest --cov=pypro
       - name: Posting Coverage
         env:
-          CODECOV_TOKEN: '731ce559-e90a-4e58-a135-15dcd65a622a'
+          CODECOV_TOKEN: 'dd284f1f-ad45-4529-9d3f-d5ae323e6a1d'
         run: |
           pipenv run codecov
       - name: Upload coverage to Codecov
