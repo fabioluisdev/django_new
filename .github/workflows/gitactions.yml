@@ -36,5 +36,6 @@ jobs:
       - name: Test with pytest
         run: |
           pipenv run pytest --cov=pypro
+          Codecov Token= '731ce559-e90a-4e58-a135-15dcd65a622a'
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
